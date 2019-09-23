@@ -1,0 +1,14 @@
+version: "2"
+services:
+  web:
+    container_name: angular-latest_dev
+    image: angular-latest_dev:latest
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/home/angular-latest
+      - /home/angular-latest/node_modules
+    tty: true
+    network_mode: default
